@@ -175,10 +175,9 @@ while not done:
 ```
 /
 ├── sessions/
-│   ├── 2025-12-16/
-│   │   └── notes.md  (每日学习流水:记录盲区、代码片段)
-│   └── 2025-12-17/
-│       └── notes.md
+│   ├── 2025-12-16.md  (每日学习流水:记录盲区、代码片段)
+│   ├── 2025-12-17.md
+│   └── 2025-12-18.md
 ├── progress/
 │   └── study-tracker.md    (单一真相来源:技能树状态)
 └── RULES.md                (本文件)
@@ -188,8 +187,7 @@ while not done:
 
 **步骤 1:记录每日会话详情 (Log)**
 
-- 创建文件夹:/sessions/YYYY-MM-DD/（如果不存在）。
-- 创建/更新:notes.md,必须包含:
+- 创建/更新:/sessions/YYYY-MM-DD.md,必须包含:
   - Core Topic: 今天攻克了哪个 Pattern?
   - My Takeaway: (记录我当时的复述,用于日后复盘)。
   - Knowledge Gap: (我答不上来的问题,标记为 [GAP])。
