@@ -3,7 +3,7 @@
 ## 📊 学习进度概览
 
 **开始日期:** 2025-12-16  
-**当前阶段:** 初始化  
+**当前阶段:** 核心编排模式 - ReAct 入门  
 **总体完成度:** 0/5 大模块
 
 ---
@@ -19,7 +19,7 @@
 
 ### B. 核心编排模式 (Core Patterns) - 30% ⭐ 最高优先级
 
-- [ ] B.1 ReAct (Reason+Act): 循环（Loop）的核心机制,Thought-Action-Observation 三元组
+- [x] B.1 ReAct (Reason+Act): 循环（Loop）的核心机制,Thought-Action-Observation 三元组
 - [ ] B.2 Plan-and-Solve (Planner): 复杂任务的拆解、DAG 图的生成与执行
 - [ ] B.3 Reflection / Self-Correction: 自我反思机制,如何让 LLM 当自己的 Reviewer
 - [ ] B.4 Tool Use / Function Calling: 接口定义（OpenAPI Spec）,工具调用的容错处理
@@ -48,13 +48,16 @@
 
 ## 🏆 已掌握主题 (Mastered Topics)
 
-_暂无 - 开始你的学习旅程吧！_
+- ReAct (B.1):  
+  - 理解了 Thought-Action-Observation 循环与 history 的作用  
+  - 能够设计带意图识别、ReAct、验证层的 RAG/需求文档助手整体架构
 
 ---
 
 ## 🔍 知识盲区 (Knowledge Gaps)
 
-_暂无 - 在学习过程中记录你的疑惑_
+- [GAP] ReAct 在具体框架(如 LangGraph/LangChain)中的状态管理与 API 设计还未实践  
+- [GAP] 如何将 ReAct+验证层的 RAG 流程落地到真实需求系统(如接入 Jira/需求平台,并控制成本与延迟)有待实战
 
 ---
 
@@ -84,4 +87,5 @@ _暂无 - 在学习过程中记录你的疑惑_
 
 ## 📝 最近更新
 
-- **2025-12-16**: 初始化学习追踪器
+- **2025-12-16**: 初始化学习追踪器  
+- **2025-12-17**: 学习 B.1 ReAct 模式,并设计 RAG/需求文档助手的 ReAct+验证架构

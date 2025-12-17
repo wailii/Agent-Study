@@ -183,15 +183,39 @@ while not done:
 └── RULES.md                (本文件)
 ```
 
-### 会话跟踪协议 (Session Protocol) - 两步流程
+### 会话跟踪协议 (Session Protocol) - 深度复盘模式
 
 **步骤 1:记录每日会话详情 (Log)**
 
-- 创建/更新:/sessions/YYYY-MM-DD.md,必须包含:
-  - Core Topic: 今天攻克了哪个 Pattern?
-  - My Takeaway: (记录我当时的复述,用于日后复盘)。
-  - Knowledge Gap: (我答不上来的问题,标记为 [GAP])。
-  - Code Snippet: (关键的实现代码或伪代码)。
+- 路径:/sessions/YYYY-MM-DD.md
+- 原则:不仅记录"学了什么",更要记录"是怎么学会的"。
+
+**必需板块:**
+
+1. 🎯 Session Context
+
+   - Topic: [Pattern Name]
+   - Duration: [Approx time]
+
+2. ⚔️ The Socratic Dialogue (关键交锋)
+
+   - Q1: [Qoder 问了什么关键问题?]
+   - My Initial Answer: (记录我最开始的理解/误区,例如:"我觉得 ReAct 就是个死循环")
+   - The Correction: (记录 Qoder 是如何纠正或引导的,例如:"它用 Debug 报错的例子点醒了我")
+   - Concept Clarity: (最终的正确理解)
+
+3. 💡 My Takeaway (核心结论)
+
+   - (用一句话总结这个 Pattern 的本质)
+   - (业务场景映射:在我的 AI 平台里能用来干嘛)
+
+4. 🕳 Knowledge Gaps (遗留盲区)
+
+   - [ ] (列出还没讲透、或者我还需要去查阅的内容)
+
+5. 💻 Code/Architecture Snippet
+
+   - (关键的伪代码或 Mermaid 流程图)
 
 **步骤 2:更新总体进度跟踪器 (Update Tracker)**
 
