@@ -3,7 +3,7 @@
 ## 📊 学习进度概览
 
 **开始日期:** 2025-12-16  
-**当前阶段:** 初始化  
+**当前阶段:** 核心编排模式 - ReAct 入门  
 **总体完成度:** 0/5 大模块
 
 ---
@@ -48,18 +48,20 @@
 
 ## 🏆 已掌握主题 (Mastered Topics)
 
-- **B.1 ReAct (Reason+Act)**: 理解了 Thought → Action → Observation → History 的循环机制,知道它适合作为高开销模式服务复杂检索/分析任务,并能用意图识别+验证层把它放进完整的 RAG/需求助手架构中
+- 2025-12-17 - B.1 ReAct: 理解 Thought-Action-Observation 循环、Router/Planner/Reflection 分工, 能设计出基于需求文档助手的 ReAct+验证架构
+
 
 ---
 
 ## 🔍 知识盲区 (Knowledge Gaps)
 
-- [GAP] ReAct 在具体框架(如 LangChain / LangGraph)中的实现与 State Graph 结合方式
-- [GAP] 需求文档助手中各类工具(需求文档检索、需求历史/差异查询等)的具体落地方案和数据建模
+- [GAP] ReAct 在具体框架 (如 LangGraph) 中的 State Graph/节点建模与接口设计
+- [GAP] 将 ReAct+验证层落地到真实需求平台 (Jira/需求系统) 时的权限、超时和错误重试策略
+
 
 ---
 
-## 📝 学习路径规划
+## 📅 学习路径规划
 
 **推荐顺序:** B → D → C → A → E
 
@@ -85,5 +87,5 @@
 
 ## 📝 最近更新
 
-- **2025-12-17**: 学习 B.1 ReAct 模式,梳理 ReAct+RAG+需求文档助手的整体架构
 - **2025-12-16**: 初始化学习追踪器
+- **2025-12-17**: 学习 ReAct 模式与需求文档助手架构
