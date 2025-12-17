@@ -200,8 +200,12 @@ while not done:
   - 更新 Syllabus 列表中的勾选状态 [ ] -> [x]。
   - 在 Mastered Topics 区块添加新学会的模式及核心见解。
   - 在 Knowledge Gaps 区块添加新发现的盲区。
-- Git Commit:(Session 结束时) 自动生成 Commit Message 并提醒我推送。
-  - Example: `git commit -m "docs: master ReAct pattern and update tracker"`
+- Git 同步协议 (Qoder 必须执行):
+  - 只要对 `/sessions/*.md` 或 `/progress/study-tracker.md` 有任何修改,必须依次执行:
+    - `git add -A`
+    - `git commit -m "合适的 docs/refactor 消息"`
+    - `git push` 将变更同步到远程 GitHub 仓库。
+  - Session 结束时,如果仍有未提交的变更,补一次提交并推送,确保远程始终是最新状态。
 
 ## 6. ⚠️ 强制验证协议与垃圾防火墙 (Anti-Hallucination & Firewall) ⚠️
 
