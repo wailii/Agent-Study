@@ -183,48 +183,82 @@ while not done:
 └── RULES.md                (本文件)
 ```
 
-### 会话跟踪协议 (Session Protocol) - 深度复盘模式 (Deep Review Mode)
+### 会话跟踪协议 (Session Protocol) - 完全复刻+图表存档版 (Deep Review Mode)
 
-核心原则:笔记的价值在于还原思考路径。不仅仅记录"结论是什么",更要记录"我是怎么从误解走到理解的"。
+核心原则:还原对话颗粒度——像“速记员”一样,保留对话的完整上下文,特别是我的“初始误解”和你的“纠正过程”。同时做到可视化沉淀——所有讨论中产生的架构图、流程图,必须以 Mermaid 形式归档。
 
 **步骤 1:记录每日会话详情 (Log)**
 
-- 路径:/sessions/YYYY-MM-DD.md
+- 创建/更新:/sessions/YYYY-MM-DD.md
 
-**必需板块:**
+**必需板块与格式(严格执行以下结构):**
 
-1. 🎯 Session Context (场景设定)
+1. 会话概览 (Session Overview)
 
-   - Topic: [Pattern Name] (e.g., ReAct & LangGraph State)
-   - Duration: [Approx time] (e.g., 45 mins)
+   - 日期: YYYY-MM-DD
+   - 时长: [大约时间]
+   - 主要主题: [讨论的模式列表]
 
-2. ⚔️ The Socratic Dialogue (关键交锋 - High Value)
+2. 核心交互记录 (Interaction Log)
 
-   (这是笔记的灵魂。必须记录苏格拉底式教学中的 Highlight 时刻,特别是那些我一开始答错、理解偏差、或者被你纠正的地方)
+   > 针对每一个讨论的知识点,必须按此格式展开,不要合并。
 
-   - Q1: [Qoder 问了什么关键问题?]
-   - My Initial Understanding: (真实记录我最开始的理解/误区。例如:"我觉得 ReAct 就是个死循环,甚至可能会爆栈。")
-   - The Correction/Guidance: (记录 Qoder 是如何纠正或引导的。例如:"Qoder 用'Debug 报错日志'的例子点醒了我,让我意识到 ReAct 是有 Observation 反馈的,不是盲目循环。")
-   - Concept Clarity: (最终的正确理解。例如:"ReAct = Thought + Action + Observation,它是动态决策,而不是静态规划。")
+   **主题 1: [具体讨论的概念,如 ReAct Loop]**
 
-   - Q2: [另一个关键问题...]
+   - 我的问题/场景 (My Question/Scenario):
+     - 逐字记录我提出的问题或场景。
+     - 例如: "我觉得 ReAct 就是个死循环,在那空转。"
+
+   - 我的初始理解 (My Initial Understanding):
+     - 记录你解释之前我的理解状态,重点记录误区。
+     - 例如:
+       - [ ] 错误认为 ...
+       - [ ] 混淆了 A 和 B ...
+
+   - 提供的解释 (Explanation Given):
+     - 你当时是怎么给我解释的?记录关键类比和逻辑。
+     - 核心概念: ...
+     - 使用的类比: (例如:用 Debug 报错日志做类比)
+
+   - 理解检查 (Comprehension Checks):
+     - 记录你当时考我的问题,以及我答对没。
+     - 问题 (Q): [你问的问题]
+     - 我的回答: [我的回答] (标记为 ✓ 正确 或 ✗ 错误)
+     - 洞察: (通过这个问题,我明白了什么)
+     - 理解程度: [优秀 / 良好 / 一般]
+
+   **主题 2: [下一个概念 ...]**
+
    - ...
 
-3. 💡 My Takeaway (核心结论)
+3. 🗺️ 流程图存档 (Diagram Archive - New)
 
-   - (用一句话总结这个 Pattern 的本质)
-   - (业务场景映射:在我的 AI 平台里能用来干嘛?例如:"可以用 ReAct 做一个自动诊断训练任务失败原因的 Agent。")
+   - 将本次对话中生成的 Mermaid 流程图/时序图收录于此,方便日后查阅。
+   - 图表 1: [图表名称,如 ReAct 执行流程]
+     - 在此处粘贴 Mermaid 代码
+   - 图表 2: [图表名称,如 RAG 路由逻辑]
+     - 在此处粘贴 Mermaid 代码
 
-4. 🕳 Knowledge Gaps (遗留盲区)
+4. 识别出的知识盲区 (Knowledge Gaps Identified)
 
-   (不仅列出 Gap,还要标记严重程度和具体表现)
+   - 必须使用表格格式,示例:
 
-   - [ ] [High Severity] LangGraph checkpointer: 还没搞懂具体怎么持久化到 Postgres,目前只知道概念。
-   - [ ] [Medium Severity] Token Cost: 担心 ReAct 循环次数过多导致成本失控,需要补课 Loop Controller。
+   主题 | 严重程度 | 备注
+   --- | --- | ---
+   [LangGraph 持久化] | 高 | 误以为状态是存在内存里的,不知道 Checkpointer 机制
 
-5. 💻 Code/Architecture Snippet
+5. 今日掌握的主题 (Topics Mastered Today)
 
-   - (关键的伪代码或 Mermaid 流程图,必须带注释)
+   - 必须使用表格格式,示例:
+
+   主题 | 信心指数 | 备注
+   --- | --- | ---
+   [ReAct 工作流] | 高 | 理解了 Thought-Action-Observation 的闭环逻辑
+
+6. 下次会话行动项 (Action Items for Next Session)
+
+   - [ ] 练习: ...
+   - [ ] 复习: ...
 
 
 **步骤 2:更新总体进度跟踪器 (Update Tracker)**
