@@ -183,39 +183,49 @@ while not done:
 └── RULES.md                (本文件)
 ```
 
-### 会话跟踪协议 (Session Protocol) - 深度复盘模式
+### 会话跟踪协议 (Session Protocol) - 深度复盘模式 (Deep Review Mode)
+
+核心原则:笔记的价值在于还原思考路径。不仅仅记录"结论是什么",更要记录"我是怎么从误解走到理解的"。
 
 **步骤 1:记录每日会话详情 (Log)**
 
 - 路径:/sessions/YYYY-MM-DD.md
-- 原则:不仅记录"学了什么",更要记录"是怎么学会的"。
 
 **必需板块:**
 
-1. 🎯 Session Context
+1. 🎯 Session Context (场景设定)
 
-   - Topic: [Pattern Name]
-   - Duration: [Approx time]
+   - Topic: [Pattern Name] (e.g., ReAct & LangGraph State)
+   - Duration: [Approx time] (e.g., 45 mins)
 
-2. ⚔️ The Socratic Dialogue (关键交锋)
+2. ⚔️ The Socratic Dialogue (关键交锋 - High Value)
+
+   (这是笔记的灵魂。必须记录苏格拉底式教学中的 Highlight 时刻,特别是那些我一开始答错、理解偏差、或者被你纠正的地方)
 
    - Q1: [Qoder 问了什么关键问题?]
-   - My Initial Answer: (记录我最开始的理解/误区,例如:"我觉得 ReAct 就是个死循环")
-   - The Correction: (记录 Qoder 是如何纠正或引导的,例如:"它用 Debug 报错的例子点醒了我")
-   - Concept Clarity: (最终的正确理解)
+   - My Initial Understanding: (真实记录我最开始的理解/误区。例如:"我觉得 ReAct 就是个死循环,甚至可能会爆栈。")
+   - The Correction/Guidance: (记录 Qoder 是如何纠正或引导的。例如:"Qoder 用'Debug 报错日志'的例子点醒了我,让我意识到 ReAct 是有 Observation 反馈的,不是盲目循环。")
+   - Concept Clarity: (最终的正确理解。例如:"ReAct = Thought + Action + Observation,它是动态决策,而不是静态规划。")
+
+   - Q2: [另一个关键问题...]
+   - ...
 
 3. 💡 My Takeaway (核心结论)
 
    - (用一句话总结这个 Pattern 的本质)
-   - (业务场景映射:在我的 AI 平台里能用来干嘛)
+   - (业务场景映射:在我的 AI 平台里能用来干嘛?例如:"可以用 ReAct 做一个自动诊断训练任务失败原因的 Agent。")
 
 4. 🕳 Knowledge Gaps (遗留盲区)
 
-   - [ ] (列出还没讲透、或者我还需要去查阅的内容)
+   (不仅列出 Gap,还要标记严重程度和具体表现)
+
+   - [ ] [High Severity] LangGraph checkpointer: 还没搞懂具体怎么持久化到 Postgres,目前只知道概念。
+   - [ ] [Medium Severity] Token Cost: 担心 ReAct 循环次数过多导致成本失控,需要补课 Loop Controller。
 
 5. 💻 Code/Architecture Snippet
 
-   - (关键的伪代码或 Mermaid 流程图)
+   - (关键的伪代码或 Mermaid 流程图,必须带注释)
+
 
 **步骤 2:更新总体进度跟踪器 (Update Tracker)**
 
