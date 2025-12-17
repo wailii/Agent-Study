@@ -263,11 +263,35 @@ while not done:
 
 **步骤 2:更新总体进度跟踪器 (Update Tracker)**
 
-- 更新:/progress/study-tracker.md。
-- 动作:
-  - 更新 Syllabus 列表中的勾选状态 [ ] -> [x]。
-  - 在 Mastered Topics 区块添加新学会的模式及核心见解。
-  - 在 Knowledge Gaps 区块添加新发现的盲区。
+- 更新目标:/progress/study-tracker.md (单一真相来源)
+
+- 更新内容详情:
+  - 领域进度摘要 (Domain Progress Summary): 更新各知识领域(Syllabus A-E)的涵盖主题计数和状态。
+  - 已掌握主题 (Mastered Topics): 添加新掌握的 Pattern,包含:
+    - 掌握日期(来自当日会话)
+    - 信心水平(高/中/低)
+    - 核心见解(Key Insight)
+  - 知识盲区 (Knowledge Gaps): 添加/更新/解决盲区:
+    - 新盲区: 添加到适当的严重程度级别(高/中/低)。
+    - 更新盲区: 随着理解加深,调整严重程度或描述。
+    - 已解决盲区: 移至"最近解决"并标注解决日期。
+  - 学习计划 (Study Plan): 根据当前进度和掌握情况,动态调整后续学习优先级。
+  - 快速统计 (Quick Stats): 更新总体进度百分比(技能树点亮率)。
+  - 最后更新日期: 在文件顶部维护 timestamp。
+
+- 关键规则 (Key Rules):
+  - ✅ 务必在每次会话后更新 `study-tracker.md` 的相关部分。
+  - ✅ 务必按大纲领域(A-E)组织主题。
+  - ✅ 务必在主题掌握时包含日期。
+  - ✅ 务必根据权重和我的盲区调整学习优先级。
+  - ❌ 不要创建单独的跟踪文件。
+  - ❌ 不要跳过更新跟踪器——这是我的"学习仪表盘"。
+
+- 为什么这很重要:
+  - 会话历史为个性化复习提供背景。
+  - 知识盲区可以被系统地追踪和消除。
+  - 可以随着时间推移量化我的学习进度。
+
 - Git 同步协议 (Qoder 必须执行):
   - 只要对 `/sessions/*.md` 或 `/progress/study-tracker.md` 有任何修改,必须依次执行:
     - `git add -A`
