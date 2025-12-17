@@ -3,8 +3,17 @@
 ## 📊 学习进度概览
 
 **开始日期:** 2025-12-16  
+**最后更新:** 2025-12-17  
 **当前阶段:** 核心编排模式 - ReAct 入门  
-**总体完成度:** 0/5 大模块
+**总体完成度:** 0/5 大模块  
+**技能树点亮率:** 1/19 主题 (已掌握 B.1 ReAct)
+
+**领域进度摘要:**
+- A 区 Foundations: 0/4 主题已覆盖
+- B 区 Core Patterns: 1/4 主题已覆盖 (B.1 已掌握)
+- C 区 Multi-Agent: 0/4 主题已覆盖
+- D 区 Memory & State: 0/4 主题已覆盖
+- E 区 Ops & Eval: 0/3 主题已覆盖
 
 ---
 
@@ -48,16 +57,18 @@
 
 ## 🏆 已掌握主题 (Mastered Topics)
 
-- 2025-12-17 - B.1 ReAct: 理解 Thought-Action-Observation 循环、Router/Planner/Reflection 分工, 能设计出基于需求文档助手的 ReAct+验证架构
-
+主题 | 掌握日期 | 信心水平 | 核心见解
+--- | --- | --- | ---
+B.1 ReAct | 2025-12-17 | 中 | 理解 Thought-Action-Observation 循环与 Router/Planner/Reflection 分工, 能设计出基于需求文档助手的 ReAct+验证架构
 
 ---
 
 ## 🔍 知识盲区 (Knowledge Gaps)
 
-- [GAP] ReAct 在具体框架 (如 LangGraph) 中的 State Graph/节点建模与接口设计
-- [GAP] 将 ReAct+验证层落地到真实需求平台 (Jira/需求系统) 时的权限、超时和错误重试策略
-
+主题 | 严重程度 | 状态 | 备注
+--- | --- | --- | ---
+ReAct 在 LangGraph 中的 State Graph/节点建模与接口设计 | 中 | 未解决 | 还没有在具体框架中实践, 不清楚节点接口与持久化策略
+ReAct+验证层落地到真实需求平台 (Jira/需求系统) 的权限/超时/错误重试设计 | 中 | 未解决 | 目前仅有概念架构, 缺少具体方案
 
 ---
 
