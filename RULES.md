@@ -374,13 +374,14 @@ graph TD
 
 ---
 
-## 步骤 3：Git 同步
+**步骤 3：Git 同步协议 (Git Sync Protocol)**
 
-```bash
-git add -A
-git commit -m "docs: [YYYY-MM-DD] 学习记录 - [主题数]讨论 | 盲区N个 | 掌握N个主题"
-git push
-```
+- 任何对 `/sessions/*.md` 或 `/progress/study-tracker.md` 的修改，必须依次执行：
+  - `git add -A`
+  - `git commit -m "docs: [YYYY-MM-DD] 学习记录 - [主要主题]"`
+  - `git push`
+
+- Session 结束时，如有未提交变更，补一次提交确保远程最新
 
 ---
 
