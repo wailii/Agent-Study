@@ -316,32 +316,32 @@ graph TD
 #### 阶段 2：训练执行 + 实时监控
 
 ```mermaid
-graph TD
+flowchart TD
     subgraph 训练执行
         T_START[触发训练] --> T_THINK1[Thought: 准备训练参数]
-        T_THINK1 --> T_ACT1[Action: 读取 training_config<br/>+ 边缘数据统计]
+        T_THINK1 --> T_ACT1[Action: 读取 training_config\n+ 边缘数据统计]
         T_ACT1 --> T_OBS1[Observation: 确定训练参数]
         
-        T_OBS1 --> T_ACT2[Action: pipeline_trigger<br/>启动训练 Pipeline]
-        T_ACT2 --> T_OBS2[Observation: 获取 training_job_id<br/>写入 training_status="running"]
+        T_OBS1 --> T_ACT2[Action: pipeline_trigger\n启动训练 Pipeline]
+        T_ACT2 --> T_OBS2[Observation: 获取 training_job_id\n写入 training_status: running]
         
         T_OBS2 --> T_LOOP[进入监控循环]
     end
     
     subgraph 训练监控循环
         T_LOOP --> T_THINK2[Thought: 检查训练进度]
-        T_THINK2 --> T_ACT3[Action: metrics_fetcher<br/>获取当前 loss/epoch]
-        T_ACT3 --> T_OBS3[Observation: 写入 training_progress<br/>追加 loss_curve]
+        T_THINK2 --> T_ACT3[Action: metrics_fetcher\n获取当前 loss/epoch]
+        T_ACT3 --> T_OBS3[Observation: 写入 training_progress\n追加 loss_curve]
         
         T_OBS3 --> T_CHECK1{训练完成?}
         T_CHECK1 -->|否| T_THINK3[Thought: 有异常吗?]
         T_THINK3 --> T_CHECK2{loss 异常/超时?}
-        T_CHECK2 -->|是| T_ALERT[发送告警<br/>写入 notifications]
+        T_CHECK2 -->|是| T_ALERT[发送告警\n写入 notifications]
         T_CHECK2 -->|否| T_SLEEP[等待 30 秒]
         T_ALERT --> T_SLEEP
         T_SLEEP --> T_THINK2
         
-        T_CHECK1 -->|是| T_FINISH[训练完成<br/>写入 new_model_id]
+        T_CHECK1 -->|是| T_FINISH[训练完成\n写入 new_model_id]
     end
 ```
 
