@@ -3,17 +3,17 @@
 ## 📊 学习进度概览
 
 **开始日期:** 2025-12-16  
-**最后更新:** 2026-01-05  
-**当前阶段:** 多智能体协作深化 + 通用规则模板提炼  
+**最后更新:** 2026-01-16  
+**当前阶段:** 核心编排模式深化学习（B.3 Reflection 已完成）  
 **总体完成度:** 0/5 大模块  
-**技能树点亮率:** 2/19 主题 (已掌握 B.1 ReAct、C.1 Handoffs，B.2/B.3/D.2 实践中)
+**技能树点亮率:** 3/19 主题 (已掌握 B.1 ReAct、B.3 Reflection、C.1 Handoffs)
 
 ## 🧭 领域进度摘要 (Domain Progress Summary)
 
 | 领域 | 权重 | 已覆盖主题数 | 已掌握主题数 | 状态 | 优先级 |
 | ---- | ---- | ------------ | ------------ | ---- | ------ |
 | A. Foundations | 15% | 0/4 | 0 | 未开始 | 中 |
-| B. Core Patterns | 30% | 4/4 | 1 | 进行中 | 高 |
+| B. Core Patterns | 30% | 4/4 | 2 | 进行中 | 高 |
 | C. Multi-Agent | 25% | 3/4 | 0 | 初步接触 | 高 |
 | D. Memory & State | 20% | 1/4 | 0 | 初步接触 | 中 |
 | E. Ops & Eval | 10% | 0/3 | 0 | 未开始 | 低 |
@@ -33,7 +33,7 @@
 
 - [x] B.1 ReAct (Reason+Act): 循环（Loop）的核心机制,Thought-Action-Observation 三元组
 - [ ] B.2 Plan-and-Solve (Planner): 复杂任务的拆解、DAG 图的生成与执行
-- [ ] B.3 Reflection / Self-Correction: 自我反思机制,如何让 LLM 当自己的 Reviewer
+- [x] B.3 Reflection / Self-Correction: 自我反思机制,如何让 LLM 当自己的 Reviewer
 - [ ] B.4 Tool Use / Function Calling: 接口定义（OpenAPI Spec）,工具调用的容错处理
 
 ### C. 多智能体架构 (Multi-Agent Architecture) - 25%
@@ -63,6 +63,7 @@
 主题 | 掌握日期 | 信心水平 | 核心见解
 --- | --- | --- | ---
 B.1 ReAct | 2025-12-17 | 中 | 理解 Thought-Action-Observation 循环与 Router/Planner/Reflection 分工, 能设计出基于需求文档助手的 ReAct+验证架构
+B.3 Reflection / Self-Correction | 2026-01-16 | 良好 | 掌握 Actor-Critic 架构的信息隔离设计原则，理解"增量修改 vs 从头重写"的权衡策略，能设计 Human-in-the-Loop Reflection 工作流，准确诊断 Critic 判断"方向正确性"失效的根本原因（Rich Context 缺失）
 C.1 Handoffs - 多智能体路由与移交 | 2025-12-23 | 高 | 基于真实需求完整回放，提炼出通用四层移交协议（意图→功能→表现→文档），建立信息分层原则（通用规则+特殊约束），掌握摩擦策略（先直接用→看效果→再调整）
 
 ---
